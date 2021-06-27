@@ -3,8 +3,12 @@
 <p>
   In this App I used React-native-navigation, Redux, Async-storage
 </p>
+<br/>
+<p align="center">
+  <img  src="./Todo.jpg" />
+</p>
+<br/>
+<p align="center">
+ <img  src="./Finished.jpg" />
+</p>
 
-
-<img align="center" src="./Todo.jpg" />
----
-<img align="center" src="./Finished.jpg" />
