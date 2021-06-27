@@ -8,6 +8,6 @@
 
 <br/>
 
-<img align="left"src="./Todo.jpg" />
+<img align="left" src="./Todo.jpg" />
 
-<!-- <img align="right" src="./Finished.jpg" /> -->
+<img align="right" src="./Finished.jpg" />
