@@ -5,7 +5,8 @@
 <p>
   In this App I used React-native-navigation, Redux, Async-storage
 </p>
+
 <br/>
+
 <img align="left"src="./Todo.jpg" />
-<br/>
 <img align="right" src="./Finished.jpg" />
