@@ -6,6 +6,6 @@
   In this App I used React-native-navigation, Redux, Async-storage
 </p>
 
-<img align="left" src="./Todo.jpg" />
+<img align="left" src="./Todo.jpg" width="338" height="812" />
 
-<img align="right" src="./Finished.jpg" />
+<img align="right" src="./Finished.jpg" width="338" height="812" />
