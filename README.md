@@ -10,4 +10,6 @@
 
 <img align="left" src="./Todo.jpg" width="400" height="812" />
 
+<br/>
+
 <img align="right" src="./Finished.jpg" width="400" height="812" />
