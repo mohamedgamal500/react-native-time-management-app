@@ -1,4 +1,4 @@
-import { CheckBox, View, Text, StyleSheet } from "react-native";
+import { CheckBox, View, Text, StyleSheet,TouchableOpacity } from "react-native";
 import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
 const Task = ({ item, onCompoletedTodo, onDeletedTodo }) => {
@@ -14,17 +14,18 @@ const Task = ({ item, onCompoletedTodo, onDeletedTodo }) => {
             tintColors={{ true: "skyblue" }}
           />
         </View>
-        <View>
+        <View style={{ maxWidth: '80%'}}>
           <Text style={item.completed && styles.completed}>{item.text}</Text>
         </View>
       </View>
       <View style={styles.itemRight}>
+       <TouchableOpacity onPress={() => onDeletedTodo(item.key)}>
         <MaterialIcons
           name="delete-outline"
           size={24}
           color="red"
-          onPress={() => onDeletedTodo(item.key)}
         />
+         </TouchableOpacity>
       </View>
     </View>
   );
