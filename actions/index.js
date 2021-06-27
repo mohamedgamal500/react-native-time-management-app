@@ -18,3 +18,10 @@ export const updateTodo = (todos) => {
     payload: todos,
   };
 };
+
+export const getTodo = (todos) => {
+  return {
+    type: "getTodo",
+    payload: todos,
+  };
+};

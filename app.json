@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "time-management-app",
-    "slug": "time-management-app",
+    "name": "ToDo",
+    "slug": "ToDo",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/todolist_planing_icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/todo_icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,9 +21,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/todo_icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "todos.apk"
     },
     "web": {
       "favicon": "./assets/favicon.png"

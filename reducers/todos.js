@@ -1,24 +1,12 @@
-const todosReducer = (
-  state = [
-    {
-      text: "study react",
-      key: "1",
-      completed: false,
-    },
-    {
-      text: "study electron",
-      key: "2",
-      completed: true,
-    },
-  ],
-  action
-) => {
+const todosReducer = (state = [], action) => {
   switch (action.type) {
     case "addTodo":
       return action.payload;
     case "deleteTodo":
       return action.payload;
     case "updateTodo":
+      return action.payload;
+    case "getTodo":
       return action.payload;
     default:
       return state;

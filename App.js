@@ -16,8 +16,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Task from "./components/task";
 import { Provider } from "react-redux";
 import { useSelector, useDispatch } from "react-redux";
-import { addTodo, deleteTodo, updateTodo } from "./actions";
+import { addTodo, deleteTodo, updateTodo, getTodo } from "./actions";
 import store from "./store";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 function Todos() {
   const todos = useSelector((state) => state);
@@ -26,11 +27,37 @@ function Todos() {
   const [todoText, setTodoText] = useState("");
 
   useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
     const inCompeletedTodosList = todos.filter((item) => {
       return item.completed === false;
     });
     setInCompeletedTodos(inCompeletedTodosList);
+    storeData();
   }, [todos]);
+
+  storeData = async () => {
+    try {
+      const jsonValue = JSON.stringify(todos);
+      await AsyncStorage.setItem("todos", jsonValue);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  getData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem("todos");
+      if (jsonValue !== null) {
+        const value = JSON.parse(jsonValue);
+        dispatch(getTodo(value));
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   onCompoletedTodo = (todo) => {
     const todosCopy = [...todos];
