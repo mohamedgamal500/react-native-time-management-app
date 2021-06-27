@@ -115,6 +115,8 @@ function FinshedTodos() {
         <View style={styles.content}>
           <View style={styles.list}>
             <FlatList
+              showsVerticalScrollIndicator={false}
+              showsHorizontalScrollIndicator={false}
               data={compeletedTodos}
               renderItem={({ item }) => (
                 <Task
@@ -137,9 +139,37 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="Todo" component={Todos} />
-          <Tab.Screen name="Finished" component={FinshedTodos} />
+        <Tab.Navigator tabBarOptions={{ showLabel: false }}>
+          <Tab.Screen
+            name="Todo"
+            component={Todos}
+            options={{
+              tabBarIcon: ({ focused }) => (
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Text style={{ color: focused ? "skyblue" : "gray" }}>
+                    Todo
+                  </Text>
+                </View>
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Finished"
+            component={FinshedTodos}
+            options={{
+              tabBarIcon: ({ focused }) => (
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Text style={{ color: focused ? "red" : "gray" }}>
+                    Finished
+                  </Text>
+                </View>
+              ),
+            }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </Provider>
