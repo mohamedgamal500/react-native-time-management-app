@@ -21,7 +21,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/todo_icon.png",
+        "foregroundImage": "./assets/todolist_planing_icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "todos.apk"
